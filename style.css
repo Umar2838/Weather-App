@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(images/Cool\ Sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Inter-Medium;
+}
+.mobile-view {
+  margin: 40px auto;
+  height: 85%;
+  width: 300px;
+  border: px solid #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+h1 {
+  font-family: "PT Serif", serif;
+  text-align: center;
+  padding-top: 18px;
+  color: #fff;
+}
+.Search-location{
+    width: 80%;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 20px ;
+    border: none;
+    font-family: "PT Serif", serif;
+    font-size: 16px;
+    background-color: #6dd5fa;
+    outline: none;
+}
+.search-icon{
+  
+margin-top: -25px;
+margin-left: 245px;
+}
+.search-image{
+    height: 16px;
+    color: #b5b5b5;
+   
+}

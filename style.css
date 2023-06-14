@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url(images/Cool\ Sky.jpg);
+  background-image: url(images/50\ Shades\ of\ Grey.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -11,17 +11,26 @@ body {
 .mobile-view {
   margin: 40px auto;
   height: 85%;
+  background-image: url(images/download.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 300px;
-  border: px solid #fff;
-  border-radius: 10px;
+  border: 4px solid #fff;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-h1 {
+
+  }
+h2 {
   font-family: "PT Serif", serif;
   text-align: center;
-  padding-top: 18px;
+  padding-top: px;
   color: #fff;
+}
+.tempreture-icon{
+  width: 40px;
+  
+
 }
 .Search-location{
     width: 80%;
@@ -31,8 +40,11 @@ h1 {
     border: none;
     font-family: "PT Serif", serif;
     font-size: 16px;
-    background-color: #6dd5fa;
+    background-color: transparent;
     outline: none;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .search-icon{
   
@@ -41,6 +53,53 @@ margin-left: 245px;
 }
 .search-image{
     height: 16px;
-    color: #b5b5b5;
-   
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+.date-time{
+  margin-top: 24px;
+  font-size: 22px;
+  color: #fff;
+  margin-left: 25px;
+}
+.footer-icons{
+  width: 100%;
+  height: 8vh;
+  background-color: #00000098;
+  margin-top: 316px;
+  border-radius: 0 0  20px 20px ;
+}
+.footer-buttons{
+  display: flex;
+  justify-content: space-around;
+}
+.list{
+  list-style: none;
+  margin-top: 14px;
+  margin-right: 35px;
+
+}
+.buttons{
+  height: 20px;
+}
+.time{
+  color: #fff;
+
+}
+.top-icons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  
+
+  
+}
+.battery{
+  height: 20px;
+  margin-right: 40px;
+}
+.top-list{
+  list-style: none;
+
 }

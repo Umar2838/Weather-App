@@ -2,6 +2,8 @@ var days = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
 var month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 var date = new Date()
 
+var audio = document.getElementById("audio")
+
 
 var Date_time = document.getElementById("date_time");
 
@@ -17,7 +19,7 @@ function addZero(x, n) {
   
   
 var time = document.getElementById("time")
-var hours = addZero(date.getHours(),2)% 12 
+var hours = 12 - addZero(date.getHours(),2)
 var Minute = addZero(date.getMinutes(),2)
 
 
@@ -59,20 +61,21 @@ async function checkweather(city){
   if(data.weather[0].main == "Clouds"){
 
   weatherIcon.src = "images/clouds.png"
+  audio.src="/clouds.wav"
  
    } else if (data.weather[0].main == "Clear"){
  weatherIcon.src = "images/clear.png"
-
+ audio.src="/clear.mp3"
 } 
 else if (data.weather[0].main == "Rain"){
   weatherIcon.src = "images/rain.png.png"
- 
+  audio.src="/drizzle.mp3"
  } else if (data.weather[0].main == "Drizzle"){
   weatherIcon.src = "images/drizzle.png.png"
- 
+  audio.src="/drizzle.mp3"
  } else if (data.weather[0].main == "Mist"){
   weatherIcon.src = "images/mist.png.png"
- 
+  audio.src="/fog.wav"
  } 
  document.querySelector(".weather").style.display="block"
  document.querySelector(".footer-icons").style.display="block"

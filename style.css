@@ -73,7 +73,7 @@ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 }
 .date-time{
   margin-top: 24px;
-  font-size: 22px;
+  font-size: 32px;
   color: #fff;
   margin-left: 25px;
   text-align: center;
@@ -82,7 +82,7 @@ box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
   width: 100%;
   height: 8vh;
   background-color: #00000098;
-  margin-top: 26px;
+  margin-top: 22px;
   border-radius: 0 0  20px 20px ;
   /* position:fixed; */
   
@@ -151,17 +151,18 @@ margin-top: 50px;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  /* font-size: 16px; */
 }
 .col img{
-  width: 40px;
-  margin-right: 10px;
-  
+  width: 30px;
+  padding: 10px;
+  /* margin-right: 0px; */
+  /* margin-left: 20px; */
 }
 .humidity,.wind{
   margin-top: 30px;
   line-height: 0;
-  font-size: 24px;
+  font-size: 16px;
+  
 }
 .weather{
   display: none;

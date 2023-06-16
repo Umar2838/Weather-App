@@ -14,12 +14,15 @@
     <div class="mobile-view">
         <ul class="top-icons">
         <li class="top-list"  ><div class="time" id="time"></div></li>
-        <li class="top-list" ><img class="battery" src="images/full-battery.png"></li>
+        <li class="top-list" ><img class="battery" src="images/wifi.png"><img class="battery" src="images/signal.png"><img class="battery" src="images/signal.png"><img class="battery" src="images/full-battery.png"></li>
        </ul>
         <h2>Weather App</h2>
       
-        <input class="Search-location" type="text" placeholder="Search Location">
+        <input class="Search-location" type="text" placeholder="Enter City Name">
         <div class="search-icon "   ><img  class="search-image" src="images/search.png"> </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
         <div class="date-time" id="date_time"></div>
         <div class="weather">
             <h1 class="city">Karachi</h1>
@@ -56,5 +59,6 @@
     
 
     <script src="app.js"></script>
+    <script src="alert.js" ></script>
 </body>
 </html>

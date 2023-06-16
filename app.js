@@ -10,13 +10,18 @@ Date_time.innerHTML = days[date.getDay()] + ", " +  month[date.getMonth()] + " "
 function addZero(x, n) {
     while (x.toString().length < n) {
       x = "0" + x;
+      
     }
     return x;
   }
   
+  
 var time = document.getElementById("time")
-var hours = addZero(date.getHours(),2)
+var hours = addZero(date.getHours(),2)% 12 
 var Minute = addZero(date.getMinutes(),2)
+
+
+
 
 time.innerHTML = hours + ":" + Minute
 
@@ -29,10 +34,23 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 async function checkweather(city){
   const response = await fetch(apiUrl  + city +  `&appid=${apiKey}`)
+  
+  if(response.status == 404){
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Invalid City Name',
+ 
+    })
+    // document.querySelector(".error").style.display="block"
+    document.querySelector(".weather").style.display="none"
+    document.querySelector(".footer-icons").style.display="none"
+
+    
+  }
+  
   var data = await response.json()
-
-  console.log(data)
-
+  
   document.querySelector(".city").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
   document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
@@ -57,9 +75,12 @@ else if (data.weather[0].main == "Rain"){
  
  } 
  document.querySelector(".weather").style.display="block"
+ document.querySelector(".footer-icons").style.display="block"
 }
 checkweather()
 
 SearchBtn.addEventListener("click", function(){
   checkweather(Search.value)
+  document.querySelector(".error").style.display="none"
+
 })

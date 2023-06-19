@@ -15,17 +15,16 @@ function addZero(x, n) {
       
     }
     return x;
-  }
   
-  
+}
 var time = document.getElementById("time")
-var hours = 12 - addZero(date.getHours(),2)
+var hours =  addZero(date.getHours() %12 || 12,2)
 var Minute = addZero(date.getMinutes(),2)
+var ampm = date.getHours >=12 ? " AM" : " PM"
+  
 
 
-
-
-time.innerHTML = hours + ":" + Minute
+time.innerHTML = hours + ":" + Minute + ampm
 
 var Search = document.querySelector(".Search-location")
 var SearchBtn = document.querySelector(".search-icon")
